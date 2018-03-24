@@ -58,17 +58,22 @@ $("button").on("click", function() {
         // });
 
 
-
+    
     
 });
-debugger
+// debugger
 $("#submit").on("click", function addButton(){
 
     var newGif = $("input").val();
+console.log(newGif)
+    var nextBtn = $("<button>");
+    nextBtn.push(newGif);
+    newBtn.text(topics);
+    
     // var test = $("<button>");
     // newGif.push(test);
 
-    console.log(newGif);
+    // console.log(topics);
 })
 addButton();
 });
