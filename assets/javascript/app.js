@@ -51,35 +51,26 @@ $(document).on("click", ".newBtn", function () {
                 $(".test2").append(topicsDiv);
 
             }
-
-            // $(".gif").on("click", function() {
-            //         var state = $(this).attr("true");
-
-            // });
-
-
-
-
         });
-    // debugger
+    
 
-  
+
 
 });
 
 $(document).on("click", "#submit", function (event) {
     event.preventDefault();
-    // console.log("hey");
     var newGif = $("#newGif").val();
     console.log(newGif)
     var nextBtn = $("<button>");
     topics.push(newGif);
-    // newBtn.text(topics);
     $(".test").empty();
     makeButton();
 
-    // var test = $("<button>");
-    // newGif.push(test);
-
-    // console.log(topics);
+    
 })
+
+$(document).on("click", ".test2", function(event){
+    console.log(topicsImage.attr);
+
+});
