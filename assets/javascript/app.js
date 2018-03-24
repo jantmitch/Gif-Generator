@@ -18,7 +18,7 @@ function makeButton() {
 
 makeButton();
 
-$("button").on("click", function() {
+$(document).on("click", ".newBtn", function() {
     
     var topic = $(this).attr("name");
        
@@ -62,18 +62,21 @@ $("button").on("click", function() {
     
 });
 // debugger
-$("#submit").on("click", function addButton(){
 
+$("#submit").on("click", function(){
+    event.preventDefault();
+console.log("hey");
     var newGif = $("input").val();
-console.log(newGif)
+// console.log(newGif)
     var nextBtn = $("<button>");
-    nextBtn.push(newGif);
-    newBtn.text(topics);
+    topics.push(newGif);
+    // newBtn.text(topics);
+    makeButton();
     
     // var test = $("<button>");
     // newGif.push(test);
 
     // console.log(topics);
 })
-addButton();
+
 });
