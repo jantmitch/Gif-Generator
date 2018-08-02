@@ -1,6 +1,6 @@
 //Git Giphy With It
 
-var topics = ["focus", "fresh prince", "bright", "will smith"];
+var topics = ["harry potter", "star wars", "star trek", "fear and loathing"];
 var newTopic = "";
 
 
@@ -43,7 +43,7 @@ $(document).on("click", ".newBtn", function () {
                 var topicsDiv = $("<div>");
                 var topicsImage = $("<img>");
                 var p = $("<p>").text("Rating: " + results[i].rating);
-                topicsImage.attr("src", results[i].images.fixed_height_still.url);
+                topicsImage.attr("src", results[i].images.fixed_height.url);
                 topicsImage.addClass("gif");
                 topicsImage.attr("true")
                 topicsDiv.append(topicsImage);
@@ -52,9 +52,6 @@ $(document).on("click", ".newBtn", function () {
 
             }
         });
-    
-
-
 
 });
 
@@ -65,12 +62,8 @@ $(document).on("click", "#submit", function (event) {
     var nextBtn = $("<button>");
     topics.push(newGif);
     $(".test").empty();
+    $("#newGif").empty();
     makeButton();
 
     
-})
-
-$(document).on("click", ".test2", function(event){
-    console.log(topicsImage.attr);
-
 });
